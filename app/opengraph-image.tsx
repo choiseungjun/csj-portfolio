@@ -58,13 +58,14 @@ export default function OGImage() {
           </div>
           <div
             style={{
-              fontSize: "28px",
+              fontSize: "26px",
               color: "#71717A",
               fontWeight: 400,
               letterSpacing: "-0.01em",
+              lineHeight: 1.5,
             }}
           >
-            Senior Frontend Engineer · 9년차
+            화면을 이해하는 프론트엔드, 시스템을 설계하는 엔지니어
           </div>
         </div>
 
