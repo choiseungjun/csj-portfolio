@@ -1,0 +1,189 @@
+/* tokens.css — design system tokens mirrored from design_handoff_portfolio/reference/tokens.css
+ * Pretendard 폰트는 next/font/local로 로드합니다 (lib/fonts.ts 참고).
+ *
+ * 사용:
+ *   <html data-theme="light"> ... <html data-theme="dark">
+ */
+
+:root {
+  /* ── PRIMITIVE COLORS ───────────────────────────────────── */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  --color-gray-50:  #FAFAFA;
+  --color-gray-100: #F4F4F5;
+  --color-gray-200: #E4E4E7;
+  --color-gray-300: #D4D4D8;
+  --color-gray-400: #A1A1AA;
+  --color-gray-500: #71717A;
+  --color-gray-600: #52525B;
+  --color-gray-700: #3F3F46;
+  --color-gray-800: #27272A;
+  --color-gray-900: #18181B;
+
+  --color-blue-50:  #EFF6FF;
+  --color-blue-100: #DBEAFE;
+  --color-blue-400: #60A5FA;
+  --color-blue-500: #3B82F6;
+  --color-blue-600: #2563EB;
+  --color-blue-700: #1D4ED8;
+
+  --color-red-50:  #FEF2F2;
+  --color-red-400: #F87171;
+  --color-red-500: #EF4444;
+  --color-red-600: #DC2626;
+
+  --color-green-50:  #F0FDF4;
+  --color-green-400: #4ADE80;
+  --color-green-500: #22C55E;
+  --color-green-600: #16A34A;
+
+  --color-yellow-50:  #FEFCE8;
+  --color-yellow-400: #FACC15;
+  --color-yellow-500: #EAB308;
+  --color-yellow-600: #CA8A04;
+
+  /* ── SPACING ────────────────────────────────────────────── */
+  --space-0:    0px;
+  --space-0_5:  2px;
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-7:   28px;
+  --space-8:   32px;
+  --space-9:   36px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-14:  56px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32: 128px;
+
+  /* ── RADIUS ─────────────────────────────────────────────── */
+  --radius-none: 0px;
+  --radius-sm:    4px;
+  --radius-md:    8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-full: 9999px;
+
+  /* ── SHADOW ─────────────────────────────────────────────── */
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
+  --shadow-xl: 0 16px 48px rgba(0,0,0,0.14), 0 8px 16px rgba(0,0,0,0.08);
+  --shadow-focus: 0 0 0 3px rgba(59,130,246,0.25);
+  --shadow-focus-danger: 0 0 0 3px rgba(239,68,68,0.25);
+
+  /* ── Z-INDEX ────────────────────────────────────────────── */
+  --z-hide:     -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+  --z-tooltip:  600;
+
+  /* ── TRANSITION ─────────────────────────────────────────── */
+  --transition-fast:   100ms ease;
+  --transition-base:   150ms ease;
+  --transition-slow:   250ms ease;
+  --transition-spring: 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── TYPOGRAPHY ─────────────────────────────────────────── */
+  --font-sans: var(--font-pretendard), "Geist", "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+
+  --text-xs:   0.6875rem; /* 11 */
+  --text-sm:   0.8125rem; /* 13 */
+  --text-base: 0.875rem;  /* 14 */
+  --text-md:   0.9375rem; /* 15 */
+  --text-lg:   1.125rem;  /* 18 */
+  --text-xl:   1.5rem;    /* 24 */
+  --text-2xl:  2rem;      /* 32 */
+  --text-3xl:  3rem;      /* 48 */
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  --leading-tight:   1.1;
+  --leading-snug:    1.2;
+  --leading-normal:  1.4;
+  --leading-relaxed: 1.5;
+  --leading-loose:   1.6;
+
+  --tracking-tight:  -0.03em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.02em;
+  --tracking-wider:   0.05em;
+  --tracking-widest:  0.1em;
+}
+
+/* ── SEMANTIC ─ LIGHT ────────────────────────────────────── */
+[data-theme="light"], :root {
+  --bg-default: var(--color-white);
+  --bg-subtle:  var(--color-gray-50);
+  --bg-muted:   var(--color-gray-100);
+  --bg-inverse: var(--color-gray-900);
+
+  --border-default: var(--color-gray-200);
+  --border-strong:  var(--color-gray-300);
+  --border-focus:   var(--color-blue-500);
+  --border-error:   var(--color-red-500);
+
+  --text-primary:     var(--color-gray-900);
+  --text-secondary:   var(--color-gray-600);
+  --text-tertiary:    var(--color-gray-400);
+  --text-placeholder: var(--color-gray-400);
+  --text-inverse:     var(--color-white);
+  --text-error:       var(--color-red-600);
+  --text-success:     var(--color-green-600);
+
+  --accent-primary:        var(--color-blue-500);
+  --accent-primary-hover:  var(--color-blue-600);
+  --accent-primary-subtle: var(--color-blue-50);
+  --accent-danger:         var(--color-red-500);
+  --accent-danger-hover:   var(--color-red-600);
+  --accent-success:        var(--color-green-500);
+  --accent-warning:        var(--color-yellow-500);
+}
+
+/* ── SEMANTIC ─ DARK ─────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg-default: #0A0A0A;
+  --bg-subtle:  #111111;
+  --bg-muted:   #1A1A1A;
+  --bg-inverse: var(--color-gray-50);
+
+  --border-default: #2A2A2A;
+  --border-strong:  #3A3A3A;
+  --border-focus:   var(--color-blue-500);
+  --border-error:   var(--color-red-500);
+
+  --text-primary:     #FAFAFA;
+  --text-secondary:   var(--color-gray-400);
+  --text-tertiary:    var(--color-gray-600);
+  --text-placeholder: var(--color-gray-600);
+  --text-inverse:     var(--color-black);
+  --text-error:       var(--color-red-400);
+  --text-success:     var(--color-green-400);
+
+  --accent-primary:        var(--color-blue-500);
+  --accent-primary-hover:  var(--color-blue-400);
+  --accent-primary-subtle: rgba(59,130,246,0.12);
+  --accent-danger:         var(--color-red-500);
+  --accent-danger-hover:   var(--color-red-400);
+  --accent-success:        var(--color-green-500);
+  --accent-warning:        var(--color-yellow-500);
+}

@@ -1,0 +1,12 @@
+.about p {
+  margin: 0 0 var(--space-3) 0;
+  color: var(--text-secondary);
+  font-size: var(--text-md);
+  line-height: var(--leading-loose);
+  text-wrap: pretty;
+}
+
+.about strong {
+  color: var(--text-primary);
+  font-weight: var(--weight-semibold);
+}

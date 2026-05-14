@@ -1,0 +1,80 @@
+.balloon {
+  position: fixed;
+  top: 64px;
+  right: var(--space-5);
+  z-index: var(--z-toast);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-inverse);
+  color: var(--text-inverse);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  box-shadow: var(--shadow-xl);
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 280ms ease, transform 280ms ease;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 24px;
+  width: 10px;
+  height: 10px;
+  background: var(--bg-inverse);
+  transform: rotate(45deg);
+}
+
+.msg {
+  line-height: 1.4;
+  flex: 1;
+}
+
+.strong {
+  font-weight: var(--weight-semibold);
+}
+
+.balloon kbd {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 2px 6px;
+  background: color-mix(in srgb, var(--text-inverse) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--text-inverse) 20%, transparent);
+  border-radius: var(--radius-sm);
+  color: var(--text-inverse);
+  margin: 0 1px;
+}
+
+.close {
+  background: transparent;
+  border: 0;
+  color: color-mix(in srgb, var(--text-inverse) 60%, transparent);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.close:hover {
+  color: var(--text-inverse);
+}
+
+@media (max-width: 880px) {
+  .balloon {
+    display: none;
+  }
+}

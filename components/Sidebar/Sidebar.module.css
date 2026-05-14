@@ -1,0 +1,102 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  border-right: 1px solid var(--border-default);
+  background: var(--bg-subtle);
+  padding: var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+@media (max-width: 880px) {
+  .sidebar {
+    position: static;
+    height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--border-default);
+    padding: var(--space-6) var(--space-5);
+  }
+}
+
+.identity {
+  margin-bottom: var(--space-8);
+}
+
+.idRole {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--border-default);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--accent-success);
+  margin-right: var(--space-1);
+}
+
+.sideSection {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: var(--weight-semibold);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  margin: var(--space-6) 0 var(--space-2) 0;
+}
+
+.sideFoot {
+  margin-top: auto;
+  padding-top: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.version {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-tertiary);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+.sideLinks {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.iconBtn {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background: var(--bg-default);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-decoration: none;
+  padding: 0;
+}
+
+.iconBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.iconBtn svg {
+  width: 13px;
+  height: 13px;
+}
