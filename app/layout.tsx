@@ -12,6 +12,21 @@ export const metadata: Metadata = {
   title: "Seungjun Choi — Frontend",
   description:
     "9년차 시니어 프론트엔드 엔지니어. 디자인 시스템과 컨벤션으로 팀이 멀리 가게 만드는 코드베이스를 만듭니다.",
+  openGraph: {
+    title: "Seungjun Choi — Frontend",
+    description:
+      "9년차 시니어 프론트엔드 엔지니어. 디자인 시스템과 컨벤션으로 팀이 멀리 가게 만드는 코드베이스를 만듭니다.",
+    url: "https://sssjunn.vercel.app",
+    siteName: "Seungjun Choi Portfolio",
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Seungjun Choi — Frontend",
+    description:
+      "9년차 시니어 프론트엔드 엔지니어. 디자인 시스템과 컨벤션으로 팀이 멀리 가게 만드는 코드베이스를 만듭니다.",
+  },
 };
 
 const themeBootstrap = `
